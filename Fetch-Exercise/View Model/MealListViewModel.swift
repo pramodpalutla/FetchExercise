@@ -13,7 +13,7 @@ class MealListViewModel: ObservableObject {
     
     func fetchMealsByCategory() async {
         do {
-            let desserts = try await WebService().getAllMealsInCategory(category: "Dessert")
+            let desserts = try await WebService.getAllMealsInCategory(category: "Dessert")
             DispatchQueue.main.async {
                 self.mealsList = desserts
             }
@@ -27,7 +27,7 @@ class MealListViewModel: ObservableObject {
     
     func fetchMealsById(mealId: String) async {
         do {
-            let meals = try await WebService().getMealById(mealId: mealId)
+            let meals = try await WebService.getMealById(mealId: mealId)
             DispatchQueue.main.async {
                 self.meal = meals[0]
                 print(meals[0])

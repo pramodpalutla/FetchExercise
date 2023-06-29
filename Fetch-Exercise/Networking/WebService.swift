@@ -1,5 +1,5 @@
 //
-//  API.swift
+//  WebService.swift
 //  Fetch-Exercise
 //
 //  Created by Sai Palutla on 6/27/23.
@@ -7,10 +7,11 @@
 
 import Foundation
 
+// Networking Layer API Calls - Static Methods
 
 class WebService {
     
-    func getMealById(mealId: String) async throws -> [Meal] {
+   class func getMealById(mealId: String) async throws -> [Meal] {
         let request = URLRequest(url: URL.forMealId(mealId))
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)
@@ -29,7 +30,7 @@ class WebService {
         return result.meals
     }
     
-    func getAllMealsInCategory(category: String) async throws -> [Meal] {
+   class func getAllMealsInCategory(category: String) async throws -> [Meal] {
         let request = URLRequest(url: URL.forAllMealsInCategory(category))
         let configuration = URLSessionConfiguration.default
         let session = URLSession(configuration: configuration)

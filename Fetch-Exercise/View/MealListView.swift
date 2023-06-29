@@ -9,6 +9,9 @@ import SwiftUI
 
 struct MealListView: View {
     @EnvironmentObject var mealListViewModel: MealListViewModel
+    
+    // Meal List in navigation stack for Master - Detail
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {

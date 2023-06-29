@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Models
+// Response Models
 
 struct Meals: Codable {
     let meals: [Meal]

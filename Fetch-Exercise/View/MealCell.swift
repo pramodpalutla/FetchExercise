@@ -7,10 +7,11 @@
 
 import SwiftUI
 
+
 struct MealCell: View {
     let meal: Meal
-    //    let padding: CGFloat = 10
     
+    // Meal List Cell
     var body: some View {
         NavigationLink(destination: MealDetailView(meal: meal)) {
             ZStack {

@@ -11,6 +11,7 @@ struct MealDetailView: View {
     @EnvironmentObject var mealListViewModel: MealListViewModel
     let meal: Meal
     
+    // Meal Detail View
     var body: some View {
         ScrollView {
             ZStack(alignment: .center) {
